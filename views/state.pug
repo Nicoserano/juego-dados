@@ -1,0 +1,41 @@
+//vista que muestra el estado de la sala
+
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Estado de la sala
+    style.
+      /* Agrega aquí tus estilos CSS */
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      h1 {
+        color: #333;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
+      p {
+        color: #666;
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+        text-align: center;
+      }
+      a {
+        display: block;
+        margin-top: 2rem;
+        text-align: center;
+        color: #333;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+  body
+    h1 Estado de la sala
+    p Estado: #{estado}
+    a(href="javascript:history.back()") Volver al juego
+

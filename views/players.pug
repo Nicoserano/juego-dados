@@ -1,0 +1,64 @@
+//vista para ver los jugadores con los puntajes obtenidos
+
+
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Jugadores de la sala
+    style.
+      body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      }
+      header {
+      background-color: #444;
+      color: #fff;
+      padding: 1rem;
+      }
+      h1 {
+      text-align: center;
+      }
+      table {
+      border-collapse: collapse;
+      margin: 2rem;
+      }
+      th, td {
+      padding: 0.5rem;
+      border: 1px solid black;
+      }
+      th {
+      background-color: lightgrey;
+      }
+      .ganador {
+      background-color: yellow;
+      font-weight: bold;
+      }
+      .volver {
+      display: block;
+      margin: 1rem;
+      color: white;
+      background-color: #2196F3;
+      padding: 0.5rem;
+      text-align: center;
+      text-decoration: none;
+      }
+      table {
+        margin: 0 auto;
+      }
+  body
+    header
+    h1 Jugadores de la sala
+    table
+      thead
+        tr
+        th Nombre
+        th Puntaje
+      tbody
+        each jugador in jugadores
+          tr(class= jugador.esGanador ? "ganador" : "")
+            td= jugador.nombre
+            td= jugador.puntaje
+    a(class="volver" href="javascript:history.back()") Volver 
+

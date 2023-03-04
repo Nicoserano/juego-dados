@@ -1,0 +1,56 @@
+//vista para crear jugadores
+
+html
+  head
+    title Juego de dados Sofka
+    style.
+      h1{
+        text-align: center;
+      } 
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      label, input {
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      input[type='text'] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+
+      button[type='submit'] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+  body 
+    h1 Crea los jugadores
+
+    form(action=`/crear-jugadores` method='POST')
+        input(type="hidden", name="idSala", value=`${idSala}`)
+        label(for='nombre1') Nombre jugador 1
+        input(type='text' id='nombre1' name='nombre1' required)
+
+        label(for='nombre2') Nombre jugador 2
+        input(type='text' id='nombre2' name='nombre2' required)
+
+        label(for='nombre3') Nombre jugador 3
+        input(type='text' id='nombre3' name='nombre3' required)
+
+        button(type='submit') Crear jugadores
+        

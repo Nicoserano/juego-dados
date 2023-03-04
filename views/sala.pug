@@ -1,0 +1,58 @@
+//vista que se muestra si el juego esta terminado y se quiere volver a lanzar los dados
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Sala Terminada
+        style.
+            body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            }
+            h1 {
+                font-size: 3rem;
+                margin-bottom: 3rem;
+                text-align: center;
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+            }
+
+            button {
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+                margin: 0 1rem;
+                border: none;
+                border-radius: 5px;
+                background-color: #4CAF50;
+                color: #fff;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            button:hover {
+                background-color: #3e8e41;
+            }
+
+    body
+        h1 La sala ya ha terminado. No se pueden lanzar más dados.
+        div(class="button-container")
+        
+        form(action= `/ver-puntajes/${idSala}` method="get")
+        
+          button.ver-puntajes Ver puntajes
+        form(action="/" method="get")
+          button.nueva-sala Crear nueva sala

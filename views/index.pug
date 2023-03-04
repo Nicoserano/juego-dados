@@ -1,0 +1,52 @@
+//vista principal
+
+html
+  head
+    title Juego de dados Sofka
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      h1 {
+        color: #336699;
+        text-align: center;
+      }
+      form {
+        width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      button[type="submit"] {
+        background-color: #336699;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      button[type="submit"]:hover {
+        background-color: #255d8c;
+      }
+  body
+    h1 Bienvenidos al juego de dados Sofka
+    form(action="/crear-sala" method="post")
+      label(for="nombre") Ingrese el nombre de la sala:
+      input(type="text" name="nombre" id="nombre")
+      button(type="submit") Comenzar juego
+     

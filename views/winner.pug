@@ -1,0 +1,52 @@
+//vista que muestra al ganador
+
+
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Ganador de la partida
+    style.
+      body {
+        background-color: #f8f8f8;
+        font-family: Arial, sans-serif;
+        color: #333;
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+      .button-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+      }
+      button {
+        padding: 1rem 2rem;
+        font-size: 1.5rem;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .ver-puntajes {
+        background-color: #2196F3;
+      }
+      .nueva-sala {
+        background-color: #4CAF50;
+      }
+  body
+    div(class="container")
+      h1 Ganador de la partida
+      p El ganador es #{nombreGanador} con un puntaje de #{puntajeGanador}
+      div(class="button-container")
+        
+        form(action= `/ver-puntajes/${idSala}` method="get")
+        
+          button.ver-puntajes Ver puntajes
+        form(action="/" method="get")
+          button.nueva-sala Crear nueva sala

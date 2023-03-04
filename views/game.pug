@@ -1,0 +1,86 @@
+//vista del juego
+
+
+html
+  head
+    title Juego de dados
+    style.
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      .game-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto 1fr;
+        gap: 1rem;
+        height: 100vh;
+      }
+
+      .players-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+        gap: 1rem;
+        align-content: start;
+        overflow-y: scroll;
+      }
+
+      table {
+        width: 50%;
+        border-collapse: collapse;
+      }
+
+      th, td {
+        padding: 0.5rem;
+        text-align: left;
+      }
+
+      th {
+        border-bottom: 1px solid black;
+      }
+
+      td {
+        border-bottom: 1px solid lightgray;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+      }
+
+      button[type="submit"] {
+        background-color: #2196F3;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 0 0.5rem;
+      }
+
+      button[type="submit"]:hover {
+        background-color: #2196F3;
+      }
+
+  body
+    div(class="game-container")
+      div(class="players-container")
+        h1 Jugadores
+        table
+          tr
+            th Jugador
+          tr
+            td #{nombre1}
+          tr
+            td #{nombre2}
+          tr
+            td #{nombre3}
+      div(class="button-container")
+        form(action=`/lanzar-dados/${idSala}`, method="POST")
+          button(type="submit")  lanzar dados
+        form(action=`/ver-estado-sala/${idSala}`, method="GET")
+          button(type="submit") Ver estado de la sala
